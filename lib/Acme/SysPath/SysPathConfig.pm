@@ -13,10 +13,20 @@ our $VERSION = '0.01';
 
 use File::Spec;
 
-sub path_types {qw(
+sub _path_types {qw(
 	sysconfdir
 	datadir
 )};
+
+=head1 PATHS
+
+=head2 prefix
+
+=head2 sysconfdir
+
+=head2 datadir
+
+=cut
 
 sub prefix     { use Sys::Path; Sys::Path->find_distribution_root(__PACKAGE__); };
 sub sysconfdir { File::Spec->catdir(__PACKAGE__->prefix, 'conf') };
