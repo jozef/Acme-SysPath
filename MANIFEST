@@ -2,7 +2,7 @@ Build.PL
 Changes
 conf/acme-syspath.cfg
 lib/Acme/SysPath.pm
-lib/Acme/SysPath/SysPathConfig.pm
+lib/Acme/SysPath/SPc.pm
 MANIFEST			This list of files
 README
 share/acme-syspath/images/smile.ascii
