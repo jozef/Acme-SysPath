@@ -9,7 +9,7 @@ SysPathConfig - build-time system path configuration
 use warnings;
 use strict;
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 use File::Spec;
 
@@ -28,7 +28,7 @@ sub _path_types {qw(
 
 =cut
 
-sub prefix     { use Sys::Path; Sys::Path->find_distribution_root(__PACKAGE__); };
+sub prefix     { use Module::Build::SysPath; Module::Build::SysPath->find_distribution_root(__PACKAGE__); };
 sub sysconfdir { File::Spec->catdir(__PACKAGE__->prefix, 'conf') };
 sub datadir    { File::Spec->catdir(__PACKAGE__->prefix, 'share') };
 
