@@ -1,5 +1,8 @@
 Revision history for Acme-SysPath
 
+0.04    4 Sep 2009
+        - addapted to Module::Build::SysPath 0.06
+
 0.03    4 Sep 2009
 0.02
         - Build.PL tweaks

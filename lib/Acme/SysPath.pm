@@ -3,7 +3,7 @@ package Acme::SysPath;
 use warnings;
 use strict;
 
-use Acme::SysPath::SysPathConfig;
+use Acme::SysPath::SPc;
 use File::Spec;
 use IO::Any;
 
@@ -13,7 +13,7 @@ Acme::SysPath - example distribution for Sys::Path
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -34,8 +34,8 @@ Returns sysconfdir and datadir in a hash.
 
 sub paths {
     return {
-        'sysconfdir' => Acme::SysPath::SysPathConfig->sysconfdir,
-        'datadir'    => Acme::SysPath::SysPathConfig->datadir,
+        'sysconfdir' => Acme::SysPath::SPc->sysconfdir,
+        'datadir'    => Acme::SysPath::SPc->datadir,
     }
 }
 
@@ -46,7 +46,7 @@ Returns config file name.
 =cut
 
 sub config {
-    return File::Spec->catfile( Acme::SysPath::SysPathConfig->sysconfdir, 'acme-syspath.cfg' );
+    return File::Spec->catfile( Acme::SysPath::SPc->sysconfdir, 'acme-syspath.cfg' );
 }
 
 =head2 template
@@ -56,7 +56,7 @@ Return template file name.
 =cut
 
 sub template {
-    return File::Spec->catfile( Acme::SysPath::SysPathConfig->datadir, 'acme-syspath', 'tt', 'index.tt2' );
+    return File::Spec->catfile( Acme::SysPath::SPc->datadir, 'acme-syspath', 'tt', 'index.tt2' );
 }
 
 =head2 image
@@ -66,7 +66,7 @@ Return image.
 =cut
 
 sub image {
-    return IO::Any->slurp([ Acme::SysPath::SysPathConfig->datadir, 'acme-syspath', 'images', 'smile.ascii' ]);
+    return IO::Any->slurp([ Acme::SysPath::SPc->datadir, 'acme-syspath', 'images', 'smile.ascii' ]);
 }
 
 

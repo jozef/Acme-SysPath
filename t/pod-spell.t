@@ -21,7 +21,7 @@ add_stopwords(qw(
 	RT
 	CPAN
 	AnnoCPAN
-	SysPathConfig
+	SPc
 	datadir
 	sysconfdir
 ));

@@ -1,15 +1,15 @@
-package Acme::SysPath::SysPathConfig;
+package Acme::SysPath::SPc;
 
 =head1 NAME
 
-SysPathConfig - build-time system path configuration
+Acme::SysPath::SPc - build-time system path configuration
 
 =cut
 
 use warnings;
 use strict;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use File::Spec;
 

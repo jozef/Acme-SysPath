@@ -7,10 +7,10 @@ my $builder = Module::Build::SysPath->new(
     license     => 'perl',
     configure_requires => {
         'IO::Any' => 0,
-        'Module::Build::SysPath' => 0.05,
+        'Module::Build::SysPath' => 0.06,
     },
     build_requires => {
-        'Module::Build::SysPath' => 0.05,
+        'Module::Build::SysPath' => 0.06,
     },
     requires => {
         'File::Spec' => 0,
