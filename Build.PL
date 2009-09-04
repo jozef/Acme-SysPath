@@ -9,6 +9,9 @@ my $builder = Module::Build::SysPath->new(
         'IO::Any' => 0,
         'Module::Build::SysPath' => 0.05,
     },
+    build_requires => {
+        'Module::Build::SysPath' => 0.05,
+    },
     requires => {
         'File::Spec' => 0,
         'IO::Any'    => 0,
